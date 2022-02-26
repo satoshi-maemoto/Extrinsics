@@ -11,13 +11,16 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Update()
     {
-        var T = this.cameraB.transform.position - this.cameraA.transform.position;
-        var R = Quaternion.FromToRotation(this.cameraA.transform.forward, this.cameraB.transform.forward);
-        this.text.text = 
-        $"A->B\n" +
-        $"R:({R.x:f2},{R.y:f2},{R.z:f2})\n" +
-        $"T:({T.x:f2},{T.y:f2},{T.z:f2})"
-        ;
-        this.textUI.text = this.text.text;
+        if ((this.cameraA != null) && (this.cameraB != null) && (this.text != null) && (this.textUI.text != null))
+        {
+            var T = this.cameraB.transform.position - this.cameraA.transform.position;
+            var R = Quaternion.FromToRotation(this.cameraA.transform.forward, this.cameraB.transform.forward).eulerAngles;
+            this.text.text =
+            $"A->B\n" +
+            $"R:({R.x:f2},{R.y:f2},{R.z:f2})\n" +
+            $"T:({T.x:f2},{T.y:f2},{T.z:f2})"
+            ;
+            this.textUI.text = this.text.text;
+        }
     }
 }
