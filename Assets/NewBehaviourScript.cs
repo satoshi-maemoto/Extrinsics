@@ -12,7 +12,7 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         var T = this.cameraB.transform.position - this.cameraA.transform.position;
-        var R = Quaternion.FromToRotation(this.cameraB.transform.rotation.eulerAngles, this.cameraA.transform.rotation.eulerAngles);
+        var R = Quaternion.FromToRotation(this.cameraA.transform.forward, this.cameraB.transform.forward);
         this.text.text = 
         $"A->B\n" +
         $"R:({R.x:f2},{R.y:f2},{R.z:f2})\n" +

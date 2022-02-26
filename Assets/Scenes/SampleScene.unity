@@ -1972,7 +1972,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'A->B
 
-    R:(0.00,0.00,0.70)
+    R:(0.04,0.02,0.00)
 
     T:(-4.00,0.00,3.00)'
   m_isRightToLeft: 0
@@ -2091,7 +2091,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'A->B
 
-    R:(0.00,0.00,0.70)
+    R:(0.04,0.02,0.00)
 
     T:(-4.00,0.00,3.00)'
   m_isRightToLeft: 0
